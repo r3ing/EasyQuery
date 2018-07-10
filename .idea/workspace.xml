@@ -22,24 +22,27 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="EasyQuery.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="EasyQuery.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/EasyQuery.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.1978691">
-              <caret line="89" column="43" selection-start-line="89" selection-start-column="43" selection-end-line="89" selection-end-column="43" />
+            <state vertical-scroll-proportion="-6.4268293">
+              <caret line="61" column="9" selection-start-line="53" selection-start-column="8" selection-end-line="61" selection-end-column="9" />
               <folding>
-                <marker date="1531256292568" expanded="true" signature="4136:4160" placeholder="select * fro..sucursales..." />
+                <marker date="1531260532457" expanded="true" signature="4439:4470" placeholder="select * fro..sucursales..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="QueryBuilder.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/QueryBuilder.html">
+      <file leaf-file-name="test.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.576923">
-              <caret line="77" column="57" selection-start-line="77" selection-start-column="48" selection-end-line="77" selection-end-column="57" />
-              <folding />
+            <state vertical-scroll-proportion="0.2622721">
+              <caret line="11" column="39" selection-start-line="11" selection-start-column="39" selection-end-line="11" selection-end-column="39" />
+              <folding>
+                <marker date="1531260994442" expanded="true" signature="32:63" placeholder="select * fro..sucursales..." />
+                <marker date="1531260994442" expanded="true" signature="903:923" placeholder="select * fro..cuotas..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -51,6 +54,7 @@
       <list>
         <option value="$PROJECT_DIR$/QueryBuilder.html" />
         <option value="$PROJECT_DIR$/EasyQuery.php" />
+        <option value="$PROJECT_DIR$/test.php" />
       </list>
     </option>
   </component>
@@ -130,7 +134,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-3" y="-2" width="1604" height="876" extended-state="0" />
+    <frame x="-3" y="-2" width="1604" height="876" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -201,14 +205,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/QueryBuilder.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.576923">
-          <caret line="77" column="57" selection-start-line="77" selection-start-column="48" selection-end-line="77" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/standard_5.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.34502104">
@@ -217,12 +213,39 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/standard_9.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.34502104">
+          <caret line="82" column="9" selection-start-line="82" selection-start-column="9" selection-end-line="82" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/QueryBuilder.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.576923">
+          <caret line="77" column="57" selection-start-line="77" selection-start-column="48" selection-end-line="77" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/EasyQuery.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1978691">
-          <caret line="89" column="43" selection-start-line="89" selection-start-column="43" selection-end-line="89" selection-end-column="43" />
+        <state vertical-scroll-proportion="-6.4268293">
+          <caret line="61" column="9" selection-start-line="53" selection-start-column="8" selection-end-line="61" selection-end-column="9" />
           <folding>
-            <marker date="1531256292568" expanded="true" signature="4136:4160" placeholder="select * fro..sucursales..." />
+            <marker date="1531260532457" expanded="true" signature="4439:4470" placeholder="select * fro..sucursales..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2622721">
+          <caret line="11" column="39" selection-start-line="11" selection-start-column="39" selection-end-line="11" selection-end-column="39" />
+          <folding>
+            <marker date="1531260994442" expanded="true" signature="32:63" placeholder="select * fro..sucursales..." />
+            <marker date="1531260994442" expanded="true" signature="903:923" placeholder="select * fro..cuotas..." />
           </folding>
         </state>
       </provider>

@@ -40,7 +40,8 @@
 
 	function renderDataTable($recordSet) {
 		$ret=array();
-		
+
+		/*
 		$columns=$recordSet->fetch_fields();
         foreach($columns as $col) {
             $columnDescr=array();
@@ -49,8 +50,18 @@
             $columnDescr['type']=getTypeName($col->type);
             $ret['cols'][]=$columnDescr;
         }
-		
-        while($array=$recordSet->fetch_array(MYSQLI_ASSOC)) {
+		*/
+		for ($i = 0; $i < $recordSet->columnCount(); $i++) {
+			$col = $recordSet->getColumnMeta($i);
+			$columns[] = $col['name'];
+			$columnDescr=array();
+			$columnDescr['id']= $col['name'];
+			$columnDescr['label']= $col['name'];
+			$columnDescr['type']=$col['pdo_type'];
+			$ret['cols'][]=$columnDescr;
+		}
+
+        while($array=$recordSet->fetchAll(PDO::FETCH_NUM)) {
 			$values=array_values($array);
 			$rowData=array();
 			$rowData['c']=array();
@@ -77,7 +88,7 @@
 	
 	function renderRequestedList($recordSet) {
 		$ret=array();
-		while($array=$recordSet->fetch_array(MYSQLI_NUM)) {
+		while($array=$recordSet->fetchAll(PDO::FETCH_NUM)) {
 			if(!isset($array[1]))$array[1]=$array[0];
 			$ret[]=array('id'=>$array[0],'text'=>$array[1]);
 		}	
@@ -87,24 +98,24 @@
 	
 	function executeSql($sql) {
 
+		/*
 		$mysqli=new mysqli(config::$DB_HOST,config::$DB_USER,config::$DB_PASSWD,config::$DB_NAME,config::$DB_PORT);
 		if ($mysqli->connect_error) {
 			return null;
 		}
 		return $mysqli->query($sql);
+		*/
 
-
-		/*
 		try{
-			$conect_vertica  = new PDO('odbc:Driver={Vertica};Database=SWITCH;Servername=10.0.31.122', 'readOnly','X4rg#mV?G%h9&-Jq');
+			$conect_vertica = new PDO('odbc:Driver={Vertica};Database=SWITCH;Servername=10.0.31.122', 'readOnly','X4rg#mV?G%h9&-Jq');
 			$conect_vertica->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
 			$result = $conect_vertica->prepare($sql);
 			$result->execute();
-			return $result->fetch()
+			return $result;
 		}catch(PDOException $e){
 			return null;
 		}
-		*/
+
 
 
 
@@ -147,7 +158,7 @@
 		*/
 
 		//Create sql
-		return "select * from sucursales";
+		return "select * from RIPLEY.sucursales";
 	}
 
 	function getXmlModel($modelId){
@@ -230,6 +241,7 @@
 		$sql = buildSql($query_json);
 		$result='{}';
 		$recordSet = executeSql($sql);
+
 		if ($recordSet)
 		{
 			$resultSet=renderDataTable($recordSet);
@@ -241,7 +253,7 @@
 			$ret['statement']="DATABASE CONNECTION ERROR!!!";
 			$result = json_encode($ret);		
 		}
-		
+
 		echo $result;
 	}
 	else if ($action == 'listRequest') {
