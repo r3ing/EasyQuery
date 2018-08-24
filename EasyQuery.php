@@ -107,7 +107,7 @@
 		*/
 
 		try{
-			$conect_vertica = new PDO('odbc:Driver={Vertica};Database=SWITCH;Servername=10.0.31.122', 'readOnly','X4rg#mV?G%h9&-Jq');
+			$conect_vertica = new PDO('odbc:Driver={Vertica};Database=SWITCH;Servername=', '','');
 			$conect_vertica->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
 			$result = $conect_vertica->prepare($sql);
 			$result->execute();

@@ -154,7 +154,7 @@
                     </div>
                 </div>
             </div>
-            
+            <!--
             <div class="menu-block">
                 <hr class="menu-hr hr" />
                 <div class="menu-title">Menu</div>
@@ -163,8 +163,33 @@
                     <!--
                     <div id="LoadQueryButton" class="eqv-button load-query-button">Load query</div>
                     <div id="SaveQueryButton" class="eqv-button save-query-button">Save query</div>
-                    -->
+
                     <div id="ExecuteQueryButton" class="eqv-button execute-button">Execute</div>
+                </div>
+
+            </div>
+            -->
+            <div class="menu-block">
+                <hr class="menu-hr hr">
+                <div class="menu-title">Menu</div>
+                <div class="menu-content">
+                    <div id="ClearQueryButton" class="eqv-button clear-button">Clear query</div>
+                    <form action="/asp-net-mvc/EasyQuery/LoadQueryFromFile" enctype="multipart/form-data" id="LoadQueryForm" method="post">                        <input type="file" id="LoadQueryFileInput" name="queryFile" style="display: none;">
+                        <input type="submit" style="display: none;">
+                    </form>                    <div id="LoadQueryFileButton" class="eqv-button load-query-button">Load query file</div>
+                    <a href="/asp-net-mvc/EasyQuery/GetCurrentQuery" class="eqv-button save-query-button" target="_blank">Save to file</a>
+                    <div id="ExecuteQueryButton" class="eqv-button execute-button">Execute</div>
+
+                    <!-- Old version of load/save buttons -->
+                    <!--
+                    <div id="LoadQueryButton" class="eqv-button load-query-button">Load query</div>
+                    <div id="SaveQueryButton" class="eqv-button save-query-button">Save query</div>
+                    -->
+
+                    <div><p></p></div>
+                    <!-- Test button which perfoms different operation over query and model just for demonstration purposes -->
+                    <!-- Uncomment next line if would like to try -->
+                    <!--<div id="TestButton" class="eqv-button execute-button" style="display:block">Test</div>-->
                 </div>
             </div>
         </div>
